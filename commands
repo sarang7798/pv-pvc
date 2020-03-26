@@ -24,3 +24,10 @@ umount /mnt
               
     (Get pv)
      kubectl get pv
+
+
+oc edit dc mysql (we want to add pvc to mysql app)
+  |
+  - name= mysql-volume-1
+    persistentVolumeClaim:
+      claimName: mypvc1
